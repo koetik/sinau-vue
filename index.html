@@ -8,12 +8,29 @@
     </head>
     <body>
         <div id="app">
-            <h1>{{ greet('siang') }}</h1>
+            <!-- pelajaran ke 1 : hello world & data binding -->
+            <h1>Hello world Data Binding</h1>
+            <p>pelajaran pertama {{ greet('siang') }}</p>
             <p>Name : {{ name }}</p>
             <p>Job : {{ job }}</p>
             <p>Website : <a v-bind:href="website">github</a> </p>
             <input type="text" v-bind:value="name">
             <div v-html="websiteTag"></div>
+            <hr>
+
+            <!-- pelajaran ke 2 : event -->
+            <h1>Events</h1>
+            <button @click='age++'>Tambah Umur</button>
+            <button v-on:click='age--'>Kurang Umur</button>
+
+            <button @click='add(1)'>Tambah 1 tahun</button>
+            <button v-on:click='substract(1)'>Kurang 1 tahun</button>
+
+            <button v-on:dblclick='add(10)'>Tambah 10 tahun</button>
+            <button v-on:dblclick='substract(10)'>Kurang 10 tahun</button>
+            <p>My Age : {{ age }}</p>
+
+            <div id='canvas' @mousemove='updateXY'>{{x}},{{y}}</div>
         </div>
     </body>
     <script src="app.js"></script>
