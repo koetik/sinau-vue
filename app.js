@@ -5,8 +5,8 @@ new Vue({
         job : 'koplak'
     },
     methods : {
-        greet : function() {
-            return this.name 
+        greet : function(time) {
+            return 'Selamat '+ time 
         }
     }
 });
