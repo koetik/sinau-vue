@@ -4,7 +4,7 @@ new Vue({
         name :'Genclik',
         job : 'koplak',
         website : 'https://github.com/koetik/',
-        websiteTag : '<a href="https://github.com/koetik/"> website on v-html</a>',
+        websiteTag : '<a href="https://github.com/koetik/" target="blank"> website on v-html</a>',
         age : 20,
         x : 0,
         y : 0,

@@ -14,7 +14,8 @@
             <p>Name : {{ name }}</p>
             <p>Job : {{ job }}</p>
             <p>Website : <a v-bind:href="website">github</a> </p>
-            <input type="text" v-bind:value="name">
+            <p> v-bind:value : <input type="text" v-bind:value="name"> </p>
+            <p>v-model : <input type="text" v-model="name"></p>
             <div v-html="websiteTag"></div>
             <hr>
 
