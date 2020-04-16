@@ -32,8 +32,10 @@
             <p>My Age : {{ age }}</p>
 
             <div id='canvas' @mousemove='updateXY'>{{x}},{{y}}</div>
+            <hr>
 
             <!-- pelajaran ke 3 : 2 way data binding -->
+            <h1>2 Way Data Binding</h1>
             <p>Input Nama : <input type="text" v-model="nama"></p>
             <p>Input Jabatan : <input type="text" v-model="jabatan"></p>
             <p>Input keperluan : <input type="text" v-model="keperluan" @keyup.enter="rekap"></p>
@@ -42,9 +44,10 @@
             <p>Nama : {{ nama }}</p>
             <p>Jabatan : {{ jabatan }}</p>
             <p>Keperluan : {{ keperluan }}</p>
+            <hr>
 
             <!-- pelajaran ke 4 : 2 computed properties -->
-            <h1>computed properties</h1>
+            <h1>Computed properties</h1>
             <button @click="nilaiA++">Tambah Nilai A</button>
             <button @click="nilaiB++">Tambah Nilai B</button>
             <button @click="nilaiA--">Kurang Nilai A</button>
