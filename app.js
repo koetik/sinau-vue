@@ -8,6 +8,9 @@ new Vue({
         age : 20,
         x : 0,
         y : 0,
+        nama : '',
+        jabatan : '',
+        keperluan : ''
     },
     methods : {
         greet : function(time) {
@@ -22,6 +25,9 @@ new Vue({
         updateXY : function(event) {
             this.x = event.offsetX
             this.y = event.offsetY
+        },
+        rekap : function() {
+            alert('nama : '+ this.nama + ' Jabatan : '+ this.jabatan +' keperluan : '+this.keperluan)
         }
     }
 });

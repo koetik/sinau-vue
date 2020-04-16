@@ -32,6 +32,17 @@
             <p>My Age : {{ age }}</p>
 
             <div id='canvas' @mousemove='updateXY'>{{x}},{{y}}</div>
+
+            <!-- pelajaran ke 3 : 2 way data binding -->
+            <p>Input Nama : <input type="text" v-model="nama"></p>
+            <p>Input Jabatan : <input type="text" v-model="jabatan"></p>
+            <p>Input keperluan : <input type="text" v-model="keperluan" @keyup.enter="rekap"></p>
+            <i>setelah ketik di form keperluan tekan enter</i>
+
+            <p>Nama : {{ nama }}</p>
+            <p>Jabatan : {{ jabatan }}</p>
+            <p>Keperluan : {{ keperluan }}</p>
+
         </div>
     </body>
     <script src="app.js"></script>
