@@ -10,7 +10,9 @@ new Vue({
         y : 0,
         nama : '',
         jabatan : '',
-        keperluan : ''
+        keperluan : '',
+        nilaiA : 0,
+        nilaiB : 0,
     },
     methods : {
         greet : function(time) {
@@ -28,6 +30,14 @@ new Vue({
         },
         rekap : function() {
             alert('nama : '+ this.nama + ' Jabatan : '+ this.jabatan +' keperluan : '+this.keperluan)
+        }
+    },
+    computed : {
+        addAgeA : function() {
+            return this.nilaiA + this.age
+        },
+        addAgeB : function() {
+            return this.nilaiB + this.age
         }
     }
 });

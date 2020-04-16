@@ -43,6 +43,16 @@
             <p>Jabatan : {{ jabatan }}</p>
             <p>Keperluan : {{ keperluan }}</p>
 
+            <!-- pelajaran ke 4 : 2 computed properties -->
+            <h1>computed properties</h1>
+            <button @click="nilaiA++">Tambah Nilai A</button>
+            <button @click="nilaiB++">Tambah Nilai B</button>
+            <button @click="nilaiA--">Kurang Nilai A</button>
+            <button @click="nilaiB--">Kurang Nilai B</button>
+            <p>nilai A = {{nilaiA}}</p>
+            <p>nilai B = {{nilaiB}}</p>
+            <p>nilai A + umur = {{addAgeA}}</p>
+            <p>nilai B + umur = {{addAgeB}}</p>
         </div>
     </body>
     <script src="app.js"></script>
