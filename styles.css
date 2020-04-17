@@ -19,6 +19,6 @@ span {
 }
 
 .nearby span:after {
-	content: "Near";
+	content: "Bed";
 	margin-left: 10px;
 }
