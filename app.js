@@ -13,6 +13,8 @@ new Vue({
         keperluan : '',
         nilaiA : 0,
         nilaiB : 0,
+        available : true,
+        nearby : false
     },
     methods : {
         greet : function(time) {
@@ -38,6 +40,12 @@ new Vue({
         },
         addAgeB : function() {
             return this.nilaiB + this.age
+        },
+        compClasses : function() {
+            return {
+                available : this.available,
+                nearby : this.nearby,
+            }
         }
     }
 });
