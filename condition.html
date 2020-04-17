@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sinau Vue js</title>
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+        	<!-- pelajaran ke 6 : Conditonals  -->
+        	<h1>Conditionals</h1>
+        	<p>
+        		Perbedaan v-if dan v-show terletak pada styling saat inspeks element.<br>
+        		- jika v-if ketika kondisi false maka element hilang (dihapus). <br>
+        		- sedangkan v-show ketika kondisi false maka element tidak ditampilkan style <i>"display:none"</i>. <br>
+
+        	</p>
+        	<button @click="error = !error">Toggle Error</button>
+        	<button @click="success = !success">Toggle Success</button>
+
+        	<p v-if="error">Ada error</p>
+        	<p v-else-if="success">Hore sukses</p>
+
+        	<p v-show="error">Ada error (v-show)</p>
+        	<p v-show="success">hore sukses koplak (v-show)</p>
+
+
+        </div>
+    </body>
+    <script src="condition.js"></script>
+</html>
