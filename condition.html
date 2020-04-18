@@ -16,6 +16,7 @@
         		- sedangkan v-show ketika kondisi false maka element tidak ditampilkan style <i>"display:none"</i>. <br>
 
         	</p>
+
         	<button @click="error = !error">Toggle Error</button>
         	<button @click="success = !success">Toggle Success</button>
 
@@ -24,7 +25,41 @@
 
         	<p v-show="error">Ada error (v-show)</p>
         	<p v-show="success">hore sukses koplak (v-show)</p>
+        	<hr>
 
+        	<!-- pelajaran ke 7 : Looping  -->
+        	<h1>Looping</h1>
+
+        	<p>Looping list</p>
+        	<ol>
+        		<li v-for="character in characters">{{character}}</li>
+        	</ol>
+
+        	<p>Looping tanpa index dan menyebutkan key</p>
+        	<ul>
+        		<li v-for="saint in goldSaints">{{saint.nama}} - {{saint.bintang}}</li>
+        	</ul>
+
+        	<p>Looping dengan index dan menyebutkan key</p>
+        	<ul>
+        		<li v-for="(saint, index) in goldSaints">{{index}}. {{saint.nama}} - {{saint.bintang}}</li>
+        	</ul>
+
+        	<p>Looping dengan template</p>
+
+        	<template v-for="(saint, index) in goldSaints">
+        		<h4>{{index}}. {{saint.nama}}</h4>
+        		<h5>- {{saint.bintang}}</h5>
+        	</template>
+
+        	<p>Looping dengan template dengan key val</p>
+
+        	<template v-for="saint in goldSaints">
+        		<div v-for="(val, key) in saint">
+        			<h5>{{key}} => {{val}}</h5>
+        		</div>
+        		-----------------------------
+        	</template>
 
         </div>
     </body>
