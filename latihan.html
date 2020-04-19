@@ -8,22 +8,81 @@
     </head>
     <body>
         <div id="app">
+
         	<div class="container" style="margin-top: 20px;">
+        		<h1>Latihan 1</h1>
     			<div class="row">
-    				<div class="col-12">
+    				<div class="col-6">
 	            		<span>Select Gender</span>
 	            		<select class="form-control" v-model="genders.selected">
 	            			<option value="">-Pilih Gender-</option>
 	            			<option v-for="gender in genders.option" v-bind:value="gender.key">{{gender.value}}</option>
 	            		</select>
 	            	</div>
-	            	<div class="col-12">
+	            	<div class="col-6">
 	            		<span>Enter Your Name</span>
 	            		<input class="form-control" v-model="name"> </input>
 	            	</div>
 	            	<div class="col-12" v-if="name">
 	            		<h3 v-if="genders.selected == 'male'">Hello Mr. {{name}}</h3>
 	            		<h3 v-else-if="genders.selected == 'female'">Hello Mrs. {{name}}</h3>
+	            	</div>
+	            </div>
+        	</div>
+        	<hr>
+        	<div class="container" style="margin-top: 20px;">
+        		<h1>Latihan 2 Profile</h1>
+        		<div class="row">
+    				<div class="col-3">
+	            		<span>Nama</span>
+	            		<input class="form-control" v-model="profile.nama" />
+	            	</div>
+	            	<div class="col-2">
+	            		<span>Tinggi</span>
+	            		<input class="form-control" v-model="profile.tinggi" />
+	            	</div>
+	            	<div class="col-2">
+	            		<span>Berat</span>
+	            		<input class="form-control" v-model="profile.berat" />
+	            	</div>
+	            	<div class="col-2">
+	            		<span>Warna Mata</span>
+	            		<input class="form-control" v-model="profile.warnaMata" />
+	            	</div>
+	            	<div class="col-3">
+	            		<span>Makanan Favorit</span>
+	            		<input class="form-control" v-model="profile.makananFavorit" />
+	            	</div>
+	            	<div class="col-12" style="margin-top: 10px;">
+	            		<ul class="list-group">
+		        			<li v-for="(val,key) in profile" class="list-group-item">{{key}} - {{val}}</li>
+		        		</ul>
+	            	</div>
+	            </div>
+        	</div>
+        	<hr>
+        	<div class="container" style="margin-top: 20px;">
+        		<h1>Latihan 3 Simpel Calculator</h1>
+        		<div class="row">
+    				<div class="col-2">
+	            		<input class="form-control" v-model.number="calc.a" />
+	            	</div>
+	            	<div class="col-2">
+	            		<select class="form-control" v-model="calc.operator">
+	            			<option>+</option>
+	            			<option>-</option>
+	            			<option>*</option>
+	            			<option>/</option>
+	            		</select>
+	            	</div>
+	            	<div class="col-2">
+	            		<input class="form-control" v-model.number="calc.b" />
+	            	</div>
+	            	<div class="col-2">
+	            		<button @click.prevent="calculate" type="submit" class="btn btn-primary">Submit</button>
+	            	</div>
+	            	<div class="col-2">
+	            		<h2>Result {{calc.a}} {{calc.operator}} {{calc.b}} = {{calc.res}}</h2>
 	            	</div>
 	            </div>
         	</div>
